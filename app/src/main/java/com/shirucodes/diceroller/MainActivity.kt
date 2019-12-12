@@ -11,6 +11,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+  lateinit var diceImage: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,10 +27,10 @@ class MainActivity : AppCompatActivity() {
             rollDice()
 
         }
+        diceImage = findViewById(R.id.dice)
     }
 
     private fun rollDice() {
-        val diceImage: ImageView = findViewById(R.id.dice)
 
         val randomInt = Random().nextInt(6) + 1
 
@@ -42,7 +44,8 @@ class MainActivity : AppCompatActivity() {
 
             else -> R.drawable.dice_6
         }
+        diceImage.setImageResource(drawableResource)
 
-       // resultText.text = random.toString()
+
     }
 }
