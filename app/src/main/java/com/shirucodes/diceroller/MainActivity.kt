@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         rollButton.setText("Let's Roll")
 
         rollButton.setOnClickListener{
-            Toast.makeText(this, "Button clicked",Toast.LENGTH_LONG).show()
+           // Toast.makeText(this, "Button clicked",Toast.LENGTH_LONG).show()
             rollDice()
 
         }
